@@ -1,0 +1,39 @@
+{
+  "name": "google-cloud-runtime-config",
+  "version": "0.0.1",
+  "description": "runtime configuraion for google cloud platform apps",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "fmt": "prettier-standard 'src/**/*.js'",
+    "prepublish": "run-s fmt build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["prettier-standard", "git add"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tosuke/google-cloud-runtime-config.git"
+  },
+  "author": "Tosuke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tosuke/google-cloud-runtime-config/issues"
+  },
+  "homepage": "https://github.com/Tosuke/google-cloud-runtime-config#readme",
+  "dependencies": {
+    "googleapis": "^22.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "npm-run-all": "^4.1.2",
+    "prettier-standard": "^7.0.3"
+  }
+}
