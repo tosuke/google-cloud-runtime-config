@@ -1,9 +1,11 @@
 {
   "name": "google-cloud-runtime-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "runtime configuraion for google cloud platform apps",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "babel src --out-dir dist",
     "fmt": "prettier-standard 'src/**/*.js'",
@@ -11,7 +13,10 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["prettier-standard", "git add"]
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
