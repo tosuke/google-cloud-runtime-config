@@ -1,9 +1,12 @@
-const google = require('googleapis')
+import * as google from 'googleapis'
 const runtimeConfig = google.runtimeconfig('v1beta1')
 
 class RuntimeConfig {
   constructor (options) {
-    this.projectId = options.projectId || process.env.GCLOUD_PROJECT
+    const defaults = {
+      projectId: process.env.GCLOUD_PROJECT
+    }
+    Object.assign(this, { ...defaults, ...options })
   }
 
   getConfig (name) {
